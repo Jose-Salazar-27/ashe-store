@@ -1,12 +1,14 @@
 //  External libraries dependencies
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 // Routes
-import { Login } from '@/routes';
+import { Login, Home } from '@/routes';
 
 // Components and Styled components
-import { Container, Button } from '@/styled-components';
+import { Navbar } from '@/components';
+import { Container, Button, appTheme } from '@/styled-components';
 import './App.css';
 
 function App() {
@@ -20,13 +22,17 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Login />} />
-      </Routes>
-      <div className='App'>
-        <Container>import funcionando</Container>
-        <Button>ola tkm</Button>
-      </div>
+      <ThemeProvider theme={appTheme}>
+        <Navbar />
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/' element={<Home />} />
+        </Routes>
+        <div className='App'>
+          <Container>import funcionando</Container>
+          <Button>ola tkm</Button>
+        </div>
+      </ThemeProvider>
     </>
   );
 }
