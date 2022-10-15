@@ -12,7 +12,7 @@ import { Container, Button, appTheme } from '@/styled-components';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
     // fetch('https://dummyjson.com/products')
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={appTheme}>
-        <Navbar />
+      <ThemeProvider theme={darkTheme ? appTheme.dark : appTheme.light}>
+        <Navbar darkTheme={darkTheme} />
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
