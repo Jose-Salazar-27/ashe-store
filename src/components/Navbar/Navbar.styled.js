@@ -7,7 +7,17 @@ export const NavbarContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 4rem;
+  margin-top: 2.5rem;
   border-bottom: 2px solid ${props => props.theme.secondBackgroundColor};
+
+  & .other-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: ${props => props.theme.secondBackgroundColor};
+  }
 
   & .logo-container {
     height: 100%;

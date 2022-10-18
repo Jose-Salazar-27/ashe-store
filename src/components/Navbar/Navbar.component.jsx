@@ -16,35 +16,42 @@ export const Navbar = () => {
 
   const iconStyles = { width: '20px', height: '20px', color: `${type === 'light' ? gray : '#fff'}` };
   return (
-    <NavbarContainer>
-      <div className='logo-container'>
-        <img src={Logo} className='logo' />
-      </div>
-      <div className='search-bar'>
-        <select name='' id='' className='search-select'>
-          {productsCategories.map(categorie => {
-            return (
-              <option key={categorie} className='option' value={categorie}>
-                {categorie}
-              </option>
-            );
-          })}
-        </select>
-        <Input className='input' placeholder='Write your search here' />
-        <Button className='button'>
-          <MdSearch style={{ ...iconStyles, color: '#fff' }} />
-        </Button>
-      </div>
-      <div className='user-options'>
-        <a href='#'>
-          <span> My account</span>
-          <MdAccessibilityNew style={iconStyles} />
-        </a>
-        <a href='#'>
-          <span>My cart</span>
-          <MdShoppingCart style={iconStyles} />
-        </a>
-      </div>
-    </NavbarContainer>
+    <>
+      <NavbarContainer>
+        <div className='other-options'>
+          <div>
+            <span>Get 30% Off On Selected Items</span>
+          </div>
+        </div>
+        <div className='logo-container'>
+          <img src={Logo} className='logo' />
+        </div>
+        <div className='search-bar'>
+          <select name='' id='' className='search-select'>
+            {productsCategories.map(categorie => {
+              return (
+                <option key={categorie} className='option' value={categorie}>
+                  {categorie}
+                </option>
+              );
+            })}
+          </select>
+          <Input className='input' placeholder='Write your search here' />
+          <Button className='button'>
+            <MdSearch style={{ ...iconStyles, color: '#fff' }} />
+          </Button>
+        </div>
+        <div className='user-options'>
+          <a href='#'>
+            <span> My account</span>
+            <MdAccessibilityNew style={iconStyles} />
+          </a>
+          <a href='#'>
+            <span>My cart</span>
+            <MdShoppingCart style={iconStyles} />
+          </a>
+        </div>
+      </NavbarContainer>
+    </>
   );
 };
