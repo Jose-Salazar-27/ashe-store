@@ -34,7 +34,7 @@ export const userSlice = createSlice({
   },
 });
 
-const getProducts = () => {
+export const getProducts = () => {
   return async (dispatch, getState) => {
     try {
       const response = await fetch('https://dummyjson.com/products');
