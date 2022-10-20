@@ -4,14 +4,14 @@ import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 // Routes
-import { Login, Home } from '@/routes';
+import { Login, Home } from '@/pages';
 
 // Components and Styled components
 import { Navbar } from '@/components';
 import { Container, Button, appTheme } from '@/styled-components';
 import './App.css';
 
-function App() {
+export default function App() {
   const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
@@ -28,13 +28,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
         </Routes>
-        <div className='App'>
-          <Container>import funcionando</Container>
-          <Button>ola tkm</Button>
-        </div>
+        <div className='App'></div>
       </ThemeProvider>
     </>
   );
 }
-
-export default App;
