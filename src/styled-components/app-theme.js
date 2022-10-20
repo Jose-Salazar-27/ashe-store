@@ -7,6 +7,7 @@ export const appTheme = {
     primaryColor: '#0046BE',
     gray: '#343434',
     fontFamily: `'Rubik', sans-serif`,
+    fontFamily: 'Rubik, sans-serif',
   },
 
   dark: {
@@ -16,5 +17,6 @@ export const appTheme = {
     fontColor: '#E8EAED',
     primaryColor: '#0046BE',
     gray: '#343434',
+    fontFamily: 'Rubik, sans-serif',
   },
 };
