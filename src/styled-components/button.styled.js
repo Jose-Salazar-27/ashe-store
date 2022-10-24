@@ -9,7 +9,7 @@ export const Button = styled.button`
   font-family: ${props => props.theme.fontFamily};
   border-radius: 5px;
   font-weight: 400;
-  width: 3rem;
-  height: 2.5rem;
+  width: 15rem;
+  height: 3.5rem;
   cursor: pointer;
 `;
