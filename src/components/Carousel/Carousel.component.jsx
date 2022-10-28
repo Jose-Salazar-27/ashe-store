@@ -1,14 +1,18 @@
 // External libraries depaendcies
+import { useSelector } from 'react-redux';
+import { productsSelector } from '@/redux/redux-slices';
 import { Link } from 'react-router-dom';
 
 // Components and styled components
 import { CarouselLayout, CustomLink } from './carousel.styled';
 import { Button } from '@/styled-components';
 
-export const Carousel = ({ products, singleProduct }) => {
+export const Carousel = () => {
+  const { products } = useSelector(productsSelector);
+  // console.log(products);
   return (
     <>
-      {products ? (
+      {products.length > 1 ? (
         products.map((product, key) => {
           if (key < 1) {
             return (
