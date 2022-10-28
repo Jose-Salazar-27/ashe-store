@@ -17,7 +17,7 @@ export const FilterContainer = styled.div`
   }
 `;
 
-export const ProductsSlider = styled.div`
+export const SliderContainer = styled.div`
   display: grid;
   grid-auto-flow: column; /* this rule place the elements in a single row and and distributes them in columns */
   grid-template-columns: minmax(40rem, 100%);
