@@ -8,3 +8,14 @@ export const getProducts = controller => {
   };
   return axios.request(config);
 };
+
+export const getSingleCategory = (category, controller) => {
+  const config = {
+    method: 'GET',
+    url: 'https://dummyjson.com/products/category',
+    signal: controller.signal,
+    params: category,
+  };
+
+  return axios.request(config);
+};
