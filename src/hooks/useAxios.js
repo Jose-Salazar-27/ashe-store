@@ -1,15 +1,18 @@
 // External libraries dependendencies
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setProducts } from '@/redux/redux-slices/products.slice';
 
-export const useAxios = (requestFunction, adapter, dependendencies = []) => {
-  const [products, setProducts] = useState([]);
+export const useAxios = (requestFunction, params, adapter, dependendencies = []) => {
+  // const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
 
   const controller = new AbortController();
   useEffect(() => {
-    requestFunction(controller)
+    requestFunction(controller, params)
       .then(reponse => {
         const parsedResponse = adapter(reponse);
-        setProducts(parsedResponse);
+        dispatch(setProducts());
       })
       .catch(error => {
         console.log(error);
@@ -20,5 +23,4 @@ export const useAxios = (requestFunction, adapter, dependendencies = []) => {
       //   controller.abort();
     };
   }, dependendencies);
-  return { products };
 };
