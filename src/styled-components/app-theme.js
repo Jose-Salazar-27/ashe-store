@@ -6,7 +6,6 @@ export const appTheme = {
     fontColor: '#000',
     primaryColor: '#0046BE',
     gray: '#343434',
-    fontFamily: `'Rubik', sans-serif`,
     fontFamily: 'Rubik, sans-serif',
   },
 
