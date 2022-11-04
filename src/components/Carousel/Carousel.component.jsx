@@ -19,8 +19,7 @@ export const Carousel = () => {
               <CarouselLayout key={product.id} background={product.thumbnail}>
                 <div className='container'>
                   <div>
-                    <span className='slogan'>{product.brand}</span>
-                    <h2 className='title'>{product.title}</h2>
+                    <span className='slogan'>{product.brand}</span>p<h2 className='title'>{product.title}</h2>
                     <p className='description'>{product.description}</p>
                     <Button>
                       <CustomLink>View ritgh now</CustomLink>
@@ -32,7 +31,7 @@ export const Carousel = () => {
           }
         })
       ) : (
-        <h2>cargando...</h2>
+        <h2>loading...</h2>
       )}
     </>
   );

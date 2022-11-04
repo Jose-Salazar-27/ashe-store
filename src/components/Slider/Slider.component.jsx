@@ -11,8 +11,9 @@ import { Filter } from './Filter';
 import { Card } from '@/components';
 import { ProductsSlider } from './ProductsSlider';
 
+// TODO: improve this component. I want to use useRef for slider
 export const Slider = () => {
-  const { products, currentCategory } = useSelector(productsSelector);
+  const { products } = useSelector(productsSelector);
   const [filter, setFilter] = useState({
     category: 'skincare',
     view: 1,
@@ -22,10 +23,6 @@ export const Slider = () => {
     <>
       <Filter filter={filter} setFilter={setFilter} />
       {products.length > 1 ? <ProductsSlider id='slider' filter={filter} products={products} /> : <h2>loading...</h2>}
-
-      <button onClick={() => handleHorizontalScroll('rigth', 'slider', 250)}>una mas</button>
-      <br />
-      <button onClick={() => handleHorizontalScroll('left', 'slider', 250)}>una menos</button>
     </>
   );
 };
