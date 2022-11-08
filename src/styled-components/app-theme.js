@@ -6,8 +6,10 @@ export const appTheme = {
     fontColor: '#000',
     primaryColor: '#0046BE',
     gray: '#343434',
-    fontFamily: `'Rubik', sans-serif`,
     fontFamily: 'Rubik, sans-serif',
+    crimsonColor: '#BE0046',
+    purpleColor: '#7800BE',
+    orangeColor: '#BE1900',
   },
 
   dark: {

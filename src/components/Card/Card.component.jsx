@@ -1,8 +1,8 @@
 // External libraries dependencies
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // Components and styled acomponents
-import { CardLayout } from './card.styled';
+import { CardLayout, CustomNavLink } from './card.styled';
 
 export const Card = ({ obj }) => {
   const { id, title, price, description, discountPercentage, rating, stock, thumbnail } = obj;
@@ -13,10 +13,8 @@ export const Card = ({ obj }) => {
         <img className='card-img' src={thumbnail} alt={`image of ${title}`} />
       </div>
       <div className='card-body'>
-        <h4>{title}</h4>
-        {/* <p className='card-description'>{description}</p> */}
-        <span>{`rating ${Number(rating)}/5`}</span>
-        <Link>view now</Link>
+        <CustomNavLink className='card-title'>{title}</CustomNavLink>
+        <p className='card-rating'>{`rating ${Number(rating)}/5`}</p>
       </div>
     </CardLayout>
   );
