@@ -68,4 +68,5 @@ export const SliderContainer = styled.div`
   overflow: hidden;
   min-height: 35rem;
   max-height: 35rem;
+  margin-bottom: 5rem;
 `;

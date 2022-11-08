@@ -20,7 +20,7 @@ export const Filter = ({ filter, setFilter }) => {
 
   return (
     <FilterContainer>
-      <h2 className='filter-title'>You might be interested</h2>
+      <h2 className='filter-title'>Our popular categories</h2>
       <ul className='tabs-container'>
         {categories.map(category => {
           return (
